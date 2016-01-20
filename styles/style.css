@@ -1,0 +1,28 @@
+
+.jumbotron {
+  /*background-image:url('http://goo.gl/04j7Nn');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  background-color: #555;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+input {
+    width: 100%;
+}
+
+#srcCdLbl{
+  font-size:15px;
+}

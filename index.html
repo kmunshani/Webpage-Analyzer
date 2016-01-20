@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- TODO:
+
+MISSING FUNC. - HIGHLIGHTING OF EACH TAG
+Work out a better way to iterate over all elements with the same tags - right now thinking of requesting elements for each tag individualy and giving them a class
+that way but that means physically going through all possible html tags - there should be a better way.
+	
+	-Mainly need to get more familiar with XML parser
+
+ALSO: Need to check how accurate this is - not sure that the new doc. I create. I think it's missing some stuf
+
+Bueatify - use bootstrap, favicon etc.
+
+Add in nice stuff like .keypress event tab stop and stuff - force url to be valid - excep. handling. etc.
+
+ -->
+
+ <!-- 
+	IDEAS ALready Explored - DO NOT TRY AGAIN
+
+		Regex to parse everything out but the tags - got complicated and stack overflow didn't like it - DO NOT TRY AGAIN 
+			Regex Used so for:
+				Remove all scripts, quotes, comments - then try to find "<..."
+
+		Backend for CORS - No Need can just use proxy
+  -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Source Analyzer</title>
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+	<div class="jumbotron">  
+	  	<div>
+	  		<h1 class="text-primary text-center">Analyze the HTML of a Webpage</h1>
+	  	</div>
+		<div class="container-fluid">
+			<div class="row">
+				<form onkeypress="return event.keyCode != 13">
+					<div class="col-md-6 pull-left">
+			    			<input id="inputBar" type="text" placeholder="Page to Explore URL" required>
+			    	</div>
+			    	<div class="col-md-6 pull-right">
+			    		<button id="submitBtn" class="btn btn=default" type="button">Submit</button>
+			    	</div>
+	  			</form>
+			</div>
+	  	</div>
+  	</div>	
+
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-md-6 pull-left">
+
+  			</div>
+  			<div class="col-md-6 pull-right">  	
+  					<label id="srcCdLbl" class="label label-default">The Source Code from the Webpage</label>	
+  					<br>		
+  					<br>		
+  			  		<textarea id="retrievedPg" readonly="true" class="form-control"> </textarea>
+  			</div>
+  		</div>
+  	</div>
+
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="scripts/main.js"></script>
+  </body>
+</html>
